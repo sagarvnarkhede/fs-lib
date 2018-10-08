@@ -1,0 +1,22 @@
+{
+  "name": "fs-lib",
+  "version": "1.0.0",
+  "description": "FS Lib",
+  "main": "src/",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagarvnarkhede/fs-lib.git"
+  },
+  "author": "Sagr V Narkhede",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sagarvnarkhede/fs-lib/issues"
+  },
+  "homepage": "https://github.com/sagarvnarkhede/fs-lib#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
