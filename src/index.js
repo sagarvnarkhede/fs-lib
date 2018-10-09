@@ -1,5 +1,5 @@
 var sortObjectByKey = require('./lib/sortObjectBykey');
 
-module.export = {
+module.exports = {
     sortObjectByKey : sortObjectByKey
 };
