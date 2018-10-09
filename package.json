@@ -1,6 +1,6 @@
 {
   "name": "fsutil-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "FS Lib",
   "main": "src/",
   "scripts": {
