@@ -1,6 +1,6 @@
 
-var _ = require('lodash');
-
+//var _ = require('lodash');
+import _ from 'lodash';
 function SortObjectByKey(obj,order){
     var keyArray = [], sortedObj = {};
     if(_.isEmpty(obj) && typeof obj !== Object){
@@ -21,4 +21,6 @@ function SortObjectByKey(obj,order){
     return sortedObj;
 }
 
-module.exports = SortObjectByKey;
+export default SortObjectByKey
+
+//module.exports = SortObjectByKey;

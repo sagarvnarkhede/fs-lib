@@ -1,17 +1,21 @@
-var echarts = require('echarts');
-var _ = require('lodash');
 
-var fsChart = function (type, value) {
-    
-    if (_.isEmpty(type) && _.isEmpty(value)) {
-        throw new Error('Missing Argument Class or Id ');
+import _ from 'lodash';
+import echarts from 'echarts'
+
+export default class {
+  
+    constructor(type, value) {
+        if (_.isEmpty(type) && _.isEmpty(value)) {
+            throw new Error('Missing Argument Class or Id ');
+        }
+        this.selectorType = type;
+        this.selector = value;
+        this.domElement = '';
     }
-    this.selectorType = type;
-    this.selector = value;
-    this.domElement = '';
+
 
     /* Check If Echart Instance Exist */
-    this.isInstanceExist = function () {
+     isInstanceExist() {
         this.getInstance();
         var flag = false;
         var chart = echarts.getInstanceByDom(this.domElement);
@@ -22,7 +26,7 @@ var fsChart = function (type, value) {
         return flag;
     }
     /* Create Dom Instance for EChart Init */
-    this.getInstance = function () {
+    getInstance() {
         if (this.selectorType === 'class') {
             var elem = document.getElementsByClassName(this.selector);
             if (elem && elem.length > 1) {
@@ -37,7 +41,7 @@ var fsChart = function (type, value) {
         }
     }
     /* Draw Echart If Dom Instance Exists */
-    this.draw = function (option) {
+    draw (option) {
         if (!this.isInstanceExist()) {
             this.chartElement = echarts.init(this.domElement);
             if (_.isEmpty(option)) {
@@ -47,9 +51,62 @@ var fsChart = function (type, value) {
             return this.chartElement;
         }
     }
+
+
+
 }
 
-module.exports = fsChart;
+// var fsChart = function (type, value) {
+    
+//     if (_.isEmpty(type) && _.isEmpty(value)) {
+//         throw new Error('Missing Argument Class or Id ');
+//     }
+//     this.selectorType = type;
+//     this.selector = value;
+//     this.domElement = '';
+
+//     /* Check If Echart Instance Exist */
+//     this.isInstanceExist = function () {
+//         this.getInstance();
+//         var flag = false;
+//         var chart = echarts.getInstanceByDom(this.domElement);
+//         if (chart) {
+//             chart.dispose();
+//             flag = true;
+//         }
+//         return flag;
+//     }
+//     /* Create Dom Instance for EChart Init */
+//     this.getInstance = function () {
+//         if (this.selectorType === 'class') {
+//             var elem = document.getElementsByClassName(this.selector);
+//             if (elem && elem.length > 1) {
+//                 console.warn('Duplicate Class found ' + this.selector);
+//             }
+//             this.domElement = elem[0];
+//         } else if (this.selectorType === 'id') {
+//             this.domElement = document.getElementById(this.selector);
+//         }
+//         if (!this.domElement) {
+//             throw new Error('Invalid Selector Found');
+//         }
+//     }
+//     /* Draw Echart If Dom Instance Exists */
+//     this.draw = function (option) {
+//         if (!this.isInstanceExist()) {
+//             this.chartElement = echarts.init(this.domElement);
+//             if (_.isEmpty(option)) {
+//                 throw new Error('Missing Argument Option');
+//             }
+//             this.chartElement.setOption(option);
+//             return this.chartElement;
+//         }
+//     }
+// }
+
+// module.exports = fsChart;
+
+
 
 // Usage :
 //
