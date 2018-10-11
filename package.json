@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/sagarvnarkhede/fs-lib#readme",
   "dependencies": {
+    "echarts": "^4.2.0-rc.1",
     "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
   }
 }

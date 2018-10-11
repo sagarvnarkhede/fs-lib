@@ -1,5 +1,7 @@
-var sortObjectByKey = require('./lib/sortObjectBykey');
+var sortObjectByKey = require('./lib/sortObjectBykey'),
+fsChart = require('./chart/fsChart');
 
 module.exports = {
-    sortObjectByKey : sortObjectByKey
+    sortObjectByKey : sortObjectByKey,
+    fsChart:fsChart
 };
