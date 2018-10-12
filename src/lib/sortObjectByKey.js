@@ -21,6 +21,6 @@ function SortObjectByKey(obj,order){
     return sortedObj;
 }
 
-export default SortObjectByKey
+export default SortObjectByKey;
 
 //module.exports = SortObjectByKey;

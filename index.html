@@ -2,19 +2,44 @@
 <html>
   <head>
     <title>Getting Started</title>
-    <script src="./dist/fsutil-lib.js"></script>
+    <script src="dist/fsutil-lib.js"></script>
   </head>
   <body>
-    
+    <div class="main" style="width:600px;height:200px;"></div>
   </body>
 <script>
 
 function a1(){
- var result = sortObjectByKey({a:1,b:2,z:3,d:4});
+  //console.log('fsutil-lib',fsutil-lib);
+ var result = fsUtilLib.sortObjectByKey({a:1,b:2,z:3,d:4});
  console.log('result',result);
 }
 
 a1();
+
+
+var option = {
+    title: {
+        text: 'ECharts Bar'
+    },
+    tooltip: {},
+    legend: {
+        data:['month']
+    },
+    xAxis: {
+        data: ["jan","feb","march","April","may","june"]
+    },
+    yAxis: {},
+    series: [{
+        name: 'month',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20]
+    }]
+};
+
+//Chart Api Calling :
+
+var chart = new fsUtilLib.fsChart('class', 'main').draw(option);
 
 </script>
 

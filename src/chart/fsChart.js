@@ -110,7 +110,7 @@ export default class {
 
 // Usage :
 //
-//var option = {
+// var option = {
 //     title: {
 //         text: 'ECharts Bar'
 //     },

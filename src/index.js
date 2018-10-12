@@ -1,20 +1,13 @@
-// var sortObjectByKey = require('./lib/sortObjectBykey'),
-// fsChart = require('./chart/fsChart');
 
-// module.exports = {
-//     sortObjectByKey : sortObjectByKey,
-//     fsChart:fsChart
-// };
+ import sortObjectByKey from './lib/sortObjectBykey';
+ import fsChart from './chart/fsChart';
 
-import sortObjectByKey from './lib/sortObjectBykey';
-import fsChart from './chart/fsChart';
+(function(obj){
+    obj.fsUtilLib = {
+            sortObjectByKey : sortObjectByKey,
+            fsChart:fsChart
+         };
+})(window);
 
-module.exports = {
-        sortObjectByKey : sortObjectByKey,
-         fsChart:fsChart
-     };
+ //module.exports = window.fsUtilLib;
 
-// export default {
-//     sortObjectByKey : sortObjectByKey,
-//     fsChart:fsChart
-// }
