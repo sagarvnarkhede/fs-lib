@@ -2,11 +2,11 @@
 <html>
   <head>
     <title>FS Core Module</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fsCore.css">
     <script src="fsCore.js"></script>
   </head>
   <body>
-      <div id="abc">
+      <div class="abc">
           <p>FS CORE</p>
       </div>
     <div class="main" style="width:600px;height:200px;"></div>
@@ -15,7 +15,7 @@
 
 function a1(){
   //console.log('fsutil-lib',fsutil-lib);
- var result = fsUtilLib.sortObjectByKey({a:1,b:2,z:3,d:4});
+ var result = fsCore.sortObjectByKey({a:1,b:2,z:3,d:4});
  console.log('result',result);
 }
 
@@ -43,7 +43,7 @@ var option = {
 
 //Chart Api Calling :
 
-var chart = new fsUtilLib.fsChart('class', 'main').draw(option);
+var chart = new fsCore.fsChart('class', 'main').draw(option);
 
 </script>
 
